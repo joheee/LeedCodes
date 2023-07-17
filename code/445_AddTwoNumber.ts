@@ -7,17 +7,7 @@ class ListNode {
     }
 }
 
-function ExtractToString(list:ListNode | null) : string {
-    let curr = list
-    let str = ''
-    while(curr !== null) {
-        str = str + curr.val.toString()
-        curr = curr.next
-    }
-    return str
-}
-
-function PushTail(list:ListNode | null, num: number) : void {
+function PushTail(list:ListNode | null, num: number) {
     if(list?.val === -23) {
         list.val = num
     } else {
@@ -29,31 +19,51 @@ function PushTail(list:ListNode | null, num: number) : void {
     }
 }
 
-function PushListNode(str:string) : ListNode {
-    let stringVersion = str
-    let listNode = new ListNode(-23,null)
-    for(let i=0;i<stringVersion.length; i++){
-        PushTail(listNode,parseInt(stringVersion.charAt(i)))
+function ConvertToArray(list: ListNode | null) : number[] {
+    let curr = list
+    let arr = []
+    while(curr !== null) {
+        arr.push(curr!.val)
+        curr = curr!.next
     }
-    return listNode
+    return arr
 }
 
-function AlignLength(strL1:string,strL2:string) : void {
+function CalculateAddition(arrL1:number[], arrL2:number[]) {
+    let len = arrL1.length > arrL2.length ? arrL1.length : arrL2.length
+    let carry = 0
+    let arr : number[] = []
+    for(let i=0;i<len;i++){
+        let l1 = Number.isNaN(arrL1[i]) || arrL1[i] === undefined ? 0 : arrL1[i]
+        let l2 = Number.isNaN(arrL2[i]) || arrL2[i] === undefined ? 0 : arrL2[i]
+        let sum = l1 + l2
+        arr.push(sum)
 
+        console.log(l2) 
+    }
+    console.log(arr)
 }
 
 function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | null {
-    let strL1 = ExtractToString(l1)
-    let strL2 = ExtractToString(l2)
-    AlignLength(strL1,strL2)
-    console.log(strL1)
-    console.log(strL2)
-    return PushListNode(strL2)
+    let arrL1 = ConvertToArray(l1)
+    let arrL2 = ConvertToArray(l2)
+ 
+    arrL1.reverse()
+    arrL2.reverse()
+
+    let result = CalculateAddition(arrL1,arrL2)
+
+    return l1
 };
 
 export function AddTwoNumber(){
-    let l1 = new ListNode(2,new ListNode(4, null))
-    let l2 = new ListNode(5,new ListNode(6, new ListNode(4, null)))
+    // let l1 = new ListNode(7,new ListNode(2, new ListNode(4, new ListNode(3, null))))
+    let l1 = new ListNode(8,new ListNode(9, new ListNode(9, null)))
+    // let l2 = new ListNode(5,new ListNode(6, new ListNode(4, null)))
 
-    console.log(addTwoNumbers(l1,l2))
+    // let l1 = new ListNode(0, null)
+    let l2 = new ListNode(2, null)
+
+    addTwoNumbers(l1,l2)
+    // console.log(addTwoNumbers(l1,l2))
 }

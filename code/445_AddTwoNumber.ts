@@ -7,14 +7,14 @@ class ListNode {
     }
 }
 
-function ExtractToNumber(list:ListNode | null) : number {
+function ExtractToString(list:ListNode | null) : string {
     let curr = list
     let str = ''
     while(curr !== null) {
         str = str + curr.val.toString()
         curr = curr.next
     }
-    return parseInt(str)
+    return str
 }
 
 function PushTail(list:ListNode | null, num: number) : void {
@@ -29,8 +29,8 @@ function PushTail(list:ListNode | null, num: number) : void {
     }
 }
 
-function PushListNode(num: number) : ListNode {
-    let stringVersion = num.toString()
+function PushListNode(str:string) : ListNode {
+    let stringVersion = str
     let listNode = new ListNode(-23,null)
     for(let i=0;i<stringVersion.length; i++){
         PushTail(listNode,parseInt(stringVersion.charAt(i)))
@@ -38,15 +38,21 @@ function PushListNode(num: number) : ListNode {
     return listNode
 }
 
+function AlignLength(strL1:string,strL2:string) : void {
+
+}
+
 function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | null {
-    let NumL1 = ExtractToNumber(l1)
-    let NumL2 = ExtractToNumber(l2)
-    let res = NumL1 + NumL2
-    return PushListNode(res)
+    let strL1 = ExtractToString(l1)
+    let strL2 = ExtractToString(l2)
+    AlignLength(strL1,strL2)
+    console.log(strL1)
+    console.log(strL2)
+    return PushListNode(strL2)
 };
 
 export function AddTwoNumber(){
-    let l1 = new ListNode(2,new ListNode(4, new ListNode(3, null)))
+    let l1 = new ListNode(2,new ListNode(4, null))
     let l2 = new ListNode(5,new ListNode(6, new ListNode(4, null)))
 
     console.log(addTwoNumbers(l1,l2))

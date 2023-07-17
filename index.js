@@ -1,4 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const _445_AddTwoNumber_1 = require("./code/445_AddTwoNumber");
-(0, _445_AddTwoNumber_1.AddTwoNumber)();
+const _79_WordSearch_1 = require("./code/79_WordSearch");
+// AddTwoNumber()
+(0, _79_WordSearch_1.WordSearch)();

@@ -1,96 +1,37 @@
-interface FindIndexInterface {
-    i:number,
-    j:number
-}
-function FindIndex(board:string[][],target:string) : FindIndexInterface {
-    for(let i=0;i<board.length;i++){
-        for(let j=0;j<board[i].length;j++){
-            if(board[i][j] === target) return {
-                i:i,
-                j:j
-            }
-        }
-    }
-    return {
-        i:-99,
-        j:-99
-    }
+function dfs(board:string[][],word:string[],i:number,j:number,s:number) : boolean {
+    if (i < 0 || i == board.length || j < 0 || j == board[0].length)
+      return false
+    if (board[i][j] != word[s] || board[i][j] == '*')
+      return false
+    if (s == word.length - 1)
+      return true
+
+    let cache = board[i][j]
+    board[i][j] = '*'
+
+    let isExist =   dfs(board,word,i+1,j,s+1) ||
+                    dfs(board,word,i-1,j,s+1) || 
+                    dfs(board,word,i,j+1,s+1) || 
+                    dfs(board,word,i,j-1,s+1)  
+                    
+    board[i][j] = cache
+    return isExist
 }
 
-function IsIndexSame(root:FindIndexInterface, neighbour:FindIndexInterface) : boolean {
-    if(root.i === neighbour.i && root.j === neighbour.j) return true
+function exist(board: string[][], word: string) : boolean {
+    for (let i = 0; i < board.length; ++i)
+      for (let j = 0; j < board[0].length; ++j)
+        if (dfs(board, word.split(''), i, j, 0))
+          return true;
     return false
-}
-
-function IsValidChildren(board:string[][],neighbour:FindIndexInterface) : boolean {
-
-    let leftBound = -1
-    let rightBound = board.length
-    let topBound = -1
-    let bottomBound = board[0].length
-
-    if(neighbour.i === leftBound || neighbour.i === rightBound) return false
-    if(neighbour.j === topBound || neighbour.j === bottomBound) return false
-
-    return true
-}
-
-function FindChild(board:string[][], root:FindIndexInterface) : FindIndexInterface[] {
-    let arr : FindIndexInterface[] = [] 
-    // console.log(root)
-
-    let leftNeighbour = {
-        i:root.i,
-        j:root.j-1
-    }
-    let rightNeighbour = {
-        i:root.i,
-        j:root.j+1
-    } 
-    let topNeighbour = {
-        i:root.i-1,
-        j:root.j
-    } 
-    let bottomNeighbour = {
-        i:root.i+1,
-        j:root.j
-    }
-
-    // check if left neighbour is the root itself, or valid grid of the array
-    if(!IsIndexSame(root, leftNeighbour) && IsValidChildren(board,leftNeighbour)) {
-        // console.log('valid child leftNeighbour')
-        arr.push(leftNeighbour)
-    }
-    if(!IsIndexSame(root, rightNeighbour) && IsValidChildren(board,rightNeighbour)) {
-        // console.log('valid child rightNeighbour')
-        arr.push(rightNeighbour)
-    }
-    if(!IsIndexSame(root, topNeighbour) && IsValidChildren(board,topNeighbour)) {
-        // console.log('valid child topNeighbour')
-        arr.push(topNeighbour)
-    }
-    if(!IsIndexSame(root, bottomNeighbour) && IsValidChildren(board,bottomNeighbour)) {
-        // console.log('valid child bottomNeighbour')
-        arr.push(bottomNeighbour)
-    }
-
-    return arr
-}
-
-function exist(board: string[][], word: string): boolean {
-    let wordQueue = word.split('')
-    let root = FindIndex(board, wordQueue[0])
-
-    // first element is not found
-    if(root.i === -99 || root.j === -99) return false
-    
-    
-
-    return true
 };
 
 export function WordSearch(){
-    let board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]]
-    let word = "ABCCED"
+    let board = [
+        ["A","B","C","E"],
+        ["S","F","C","S"],
+        ["A","D","E","E"]
+    ]
+    let word = "ABCB"
     console.log(exist(board, word))   
 }

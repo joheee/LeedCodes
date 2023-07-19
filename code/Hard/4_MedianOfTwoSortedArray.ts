@@ -1,17 +1,6 @@
 function findMedianSortedArrays(nums1: number[], nums2: number[]): number {
-    let concat = nums1.concat(nums2)
-    concat.sort((a,b) => a - b)
-    console.log(concat)
-    let res = 0
-    if(concat.length % 2 === 0) {
-        res = concat[concat.length / 2] + concat[concat.length / 2 - 1]
-        res = res / 2
-    } else {
-        res = concat[Math.floor(concat.length / 2)]
-        res = res
-    }
-
-    return res
+    let concat = nums1.concat(nums2).sort((a,b) => a - b)
+    return concat.length % 2 === 0 ? (concat[concat.length / 2] + concat[concat.length / 2 - 1]) / 2 : concat[Math.floor(concat.length / 2)]
 };
 
 export function MedianOfTwoSortedArray(){

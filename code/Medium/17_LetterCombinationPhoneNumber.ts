@@ -16,7 +16,7 @@ function letterCombinations(digits: string): string[] {
 
     let res : string[] = []
     let queue:string[] =['']
-
+ 
     while(queue.length > 0) {
         let val = queue[0]
         queue.shift()

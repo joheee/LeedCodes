@@ -60,7 +60,6 @@ function swapPairs(head: ListNode | null): ListNode | null {
     }
     remainArr.forEach(i => res.push(i))
     // console.log(arr,res)
-
     let ret =  PushToListNode(res)
     return ret?.val === -23 ? null : ret 
 };

@@ -7,7 +7,7 @@ class Solution:
     # t[i + 1..i + maxExtends[i]]
     maxExtends = [0] * n
     center = 0
-
+ 
     for i in range(1, n - 1):
       rightBoundary = center + maxExtends[center]
       mirrorIndex = center - (i - center)

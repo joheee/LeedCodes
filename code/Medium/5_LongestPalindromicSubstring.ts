@@ -10,7 +10,7 @@ function longestPalindrome(str: string): string {
     let string = updatedString(str);
     let LPS: number[] = new Array(string.length).fill(0);
     let C = 0;
-    let R = 0;
+    let R = 0; 
 
     for (let i = 0; i < string.length; i++) {
         let iMirror = 2 * C - i;

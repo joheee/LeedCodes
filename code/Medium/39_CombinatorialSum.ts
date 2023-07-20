@@ -1,24 +1,31 @@
 function combinationSum(candidates: number[], target: number): number[][] {
+    const memo: { [key: string]: number[][] } = {};
 
-    let res : number[][] = []
+    function dfs(index: number, total: number): number[][] {
+        if (total === 0) return [[]];
+        if (index >= candidates.length || total < 0) return [];
 
-    function dfs(i:number,curr:number[], total:number) : void {
-        if(total === target) {
-            res.push([...curr])
-            return
+        const key = `${index}:${total}`;
+        if (memo[key]) return memo[key];
+
+        const combinations: number[][] = [];
+        for (let i = index; i < candidates.length; i++) {
+            const candidate = candidates[i];
+            if (total - candidate >= 0) {
+                const nextCombinations = dfs(i, total - candidate);
+                for (const combination of nextCombinations) {
+                    combinations.push([candidate, ...combination]);
+                }
+            }
         }
-        if(i >= candidates.length || total > target) return
 
-        curr.push(candidates[i])
-        dfs(i, curr, total + candidates[i])
-        curr.pop()
-        dfs(i + 1, curr, total)
+        memo[key] = combinations;
+        return combinations;
     }
 
-    dfs(0,[],0)
+    return dfs(0, target);
+}
 
-    return res
-};
 
 export function CombinatorialSum(){
     console.log(combinationSum([2,3,6,7], 7))

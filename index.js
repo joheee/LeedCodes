@@ -1,4 +1,4 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const _24_SwapNodesInPair_1 = require("./code/Medium/24_SwapNodesInPair");
-(0, _24_SwapNodesInPair_1.SwapNodesInPair)();
+const _29_DivideTwoInteger_1 = require("./code/Medium/29_DivideTwoInteger");
+(0, _29_DivideTwoInteger_1.DivideTwoInteger)();

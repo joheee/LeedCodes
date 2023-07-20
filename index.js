@@ -1,4 +1,4 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const _37_SudokuSolver_1 = require("./code/Hard/37_SudokuSolver");
-(0, _37_SudokuSolver_1.SudokuSolver)();
+const _24_SwapNodesInPair_1 = require("./code/Medium/24_SwapNodesInPair");
+(0, _24_SwapNodesInPair_1.SwapNodesInPair)();

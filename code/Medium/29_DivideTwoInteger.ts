@@ -13,7 +13,7 @@ function divide(dividend: number, divisor: number): number {
     if(neutralDivisor < 0) {
         divisorNegative = true
         neutralDivisor = -1 * divisor
-    }
+    } 
     
     let res = Math.floor(neutralDividend / neutralDivisor)
     if(dividendNegative && divisorNegative) return res

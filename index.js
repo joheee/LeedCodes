@@ -1,4 +1,4 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const _5_LongestPalindromicSubstring_1 = require("./code/Medium/5_LongestPalindromicSubstring");
-(0, _5_LongestPalindromicSubstring_1.LongestPalindromicSubstring)();
+const _25_ReverseNodes_1 = require("./code/Hard/25_ReverseNodes");
+(0, _25_ReverseNodes_1.ReverseNodes)();

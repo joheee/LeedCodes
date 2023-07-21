@@ -11,5 +11,6 @@ import { SwapNodesInPair } from "./code/Medium/24_SwapNodesInPair";
 import { DivideTwoInteger } from "./code/Medium/29_DivideTwoInteger";
 import { LetterCombinationPhoneNumber } from "./code/Medium/17_LetterCombinationPhoneNumber";
 import { CombinatorialSum } from "./code/Medium/39_CombinatorialSum";
+import { MergeSortedList } from "./code/Hard/23_MergeSortedList";
 
-CombinatorialSum()
+MergeSortedList()

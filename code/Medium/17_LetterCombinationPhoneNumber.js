@@ -13,7 +13,7 @@ function letterCombinations(digits) {
         'jkl',
         'mno',
         'pqrs',
-        'tuv', 
+        'tuv',
         'wxyz'
     ];
     let res = [];

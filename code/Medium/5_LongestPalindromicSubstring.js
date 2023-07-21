@@ -21,7 +21,7 @@ function longestPalindrome(str) {
         else {
             LPS[i] = 0;
         }
-        try { 
+        try {
             while (string[i + 1 + LPS[i]] === string[i - 1 - LPS[i]]) {
                 LPS[i]++;
             }

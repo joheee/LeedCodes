@@ -15,5 +15,6 @@ import { MergeSortedList } from "./code/Hard/23_MergeSortedList";
 import { PermutationSequence } from "./code/Hard/60._PermutationSequence";
 import { NQueens } from "./code/Hard/51_N-Queens";
 import { FirstMissingPositive } from "./code/Hard/41_FirstMissingPositive";
+import { FindMedianDataStream } from "./code/Hard/295_FindMedianDataStream";
 
-FirstMissingPositive()
+FindMedianDataStream()

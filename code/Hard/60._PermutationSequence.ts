@@ -19,7 +19,6 @@ function getPermutation(n: number, k: number): string {
   
     return sb.join('');
 }
-  
 
 export function PermutationSequence(){
     console.log(getPermutation(3,3))

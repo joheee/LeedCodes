@@ -14,5 +14,6 @@ import { CombinatorialSum } from "./code/Medium/39_CombinatorialSum";
 import { MergeSortedList } from "./code/Hard/23_MergeSortedList";
 import { PermutationSequence } from "./code/Hard/60._PermutationSequence";
 import { NQueens } from "./code/Hard/51_N-Queens";
+import { FirstMissingPositive } from "./code/Hard/41_FirstMissingPositive";
 
-NQueens()
+FirstMissingPositive()

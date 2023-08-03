@@ -16,5 +16,6 @@ import { PermutationSequence } from "./code/Hard/60._PermutationSequence";
 import { NQueens } from "./code/Hard/51_N-Queens";
 import { FirstMissingPositive } from "./code/Hard/41_FirstMissingPositive";
 import { FindMedianDataStream } from "./code/Hard/295_FindMedianDataStream";
+import { LongestCommonSubsequence } from "./code/Medium/1143_LongestCommonSubsequence";
 
-FindMedianDataStream()
+LongestCommonSubsequence()

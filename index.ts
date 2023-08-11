@@ -20,5 +20,6 @@ import { LongestCommonSubsequence } from "./code/Medium/1143_LongestCommonSubseq
 import { LargestNumber } from "./code/Medium/179_LargestNumber";
 import { ContainerMostWater } from "./code/Medium/11_ContainerMostWater";
 import { Three_Sum } from "./code/Medium/15_3Sum";
+import { Four_Sum } from "./code/Medium/18_4Sum";
 
-Three_Sum()
+Four_Sum()

@@ -22,5 +22,6 @@ import { ContainerMostWater } from "./code/Medium/11_ContainerMostWater";
 import { Three_Sum } from "./code/Medium/15_3Sum";
 import { Four_Sum } from "./code/Medium/18_4Sum";
 import { Two_Sum } from "./code/easy/1_TwoSum";
+import { ZigzagConversion } from "./code/Medium/6_ZigzagConversion";
 
-Two_Sum()
+ZigzagConversion()

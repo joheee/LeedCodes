@@ -3,14 +3,15 @@ type obj = {
 }
 
 function twoSum(nums: number[], target: number): number[] {
-    const hMap:obj = {};
-    for (let i =0; i<nums.length; i++) {
-        if (target-nums[i] in hMap) {
-            return [hMap[target-nums[i]], i];
+    const hMap: obj = {};
+    for (let i = 0; i < nums.length; i++) {
+        const complement = target - nums[i];
+        if (hMap.hasOwnProperty(complement)) {
+            return [hMap[complement], i];
         }
         hMap[nums[i]] = i;
     }
-    return [-1, -1];
+    return [];
 };
 
 export function Two_Sum(){

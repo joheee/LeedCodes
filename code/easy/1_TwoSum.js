@@ -4,12 +4,13 @@ exports.Two_Sum = void 0;
 function twoSum(nums, target) {
     const hMap = {};
     for (let i = 0; i < nums.length; i++) {
-        if (target - nums[i] in hMap) {
-            return [hMap[target - nums[i]], i];
+        const complement = target - nums[i];
+        if (hMap.hasOwnProperty(complement)) {
+            return [hMap[complement], i];
         }
         hMap[nums[i]] = i;
     }
-    return [-1, -1];
+    return [];
 }
 ;
 function Two_Sum() {

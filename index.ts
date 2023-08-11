@@ -19,5 +19,6 @@ import { FindMedianDataStream } from "./code/Hard/295_FindMedianDataStream";
 import { LongestCommonSubsequence } from "./code/Medium/1143_LongestCommonSubsequence";
 import { LargestNumber } from "./code/Medium/179_LargestNumber";
 import { ContainerMostWater } from "./code/Medium/11_ContainerMostWater";
+import { Three_Sum } from "./code/Medium/15_3Sum";
 
-ContainerMostWater()
+Three_Sum()

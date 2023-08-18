@@ -24,5 +24,6 @@ import { Four_Sum } from "./code/Medium/18_4Sum";
 import { Two_Sum } from "./code/easy/1_TwoSum";
 import { ZigzagConversion } from "./code/Medium/6_ZigzagConversion";
 import { UniqueBinary } from "./code/Medium/95_UniqueBinary";
+import { MergeTwoSorted } from "./code/easy/21_MergeTwoSorted";
 
-UniqueBinary()
+MergeTwoSorted()

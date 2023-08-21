@@ -1,4 +1,4 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const _19_RemoveNthNode_1 = require("./code/Medium/19_RemoveNthNode");
-(0, _19_RemoveNthNode_1.RemoveNthNode)();
+const _20_ValidParent_1 = require("./code/easy/20_ValidParent");
+(0, _20_ValidParent_1.ValidParent)();

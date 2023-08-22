@@ -28,5 +28,6 @@ import { MergeTwoSorted } from "./code/easy/21_MergeTwoSorted";
 import { RemoveNthNode } from "./code/Medium/19_RemoveNthNode";
 import { ValidParent } from "./code/easy/20_ValidParent";
 import { RemoveDuplicates } from "./code/easy/26_RemoveDuplicates";
+import { RemoveElement } from "./code/easy/27_RemoveElement";
 
-RemoveDuplicates()
+RemoveElement()

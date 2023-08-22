@@ -1,4 +1,4 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const _88_MergeSorted_1 = require("./code/easy/88_MergeSorted");
-(0, _88_MergeSorted_1.MergeSorted)();
+const _66_PlusOne_1 = require("./code/easy/66_PlusOne");
+(0, _66_PlusOne_1.PlusOne)();

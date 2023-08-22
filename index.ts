@@ -32,5 +32,6 @@ import { RemoveElement } from "./code/easy/27_RemoveElement";
 import { SearchInRotated } from "./code/Medium/33_SearchInRotated";
 import { SortColor } from "./code/Medium/75_SortColor";
 import { MergeSorted } from "./code/easy/88_MergeSorted";
+import { PlusOne } from "./code/easy/66_PlusOne";
 
-MergeSorted()
+PlusOne()   

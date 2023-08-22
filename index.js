@@ -1,4 +1,4 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const _27_RemoveElement_1 = require("./code/easy/27_RemoveElement");
-(0, _27_RemoveElement_1.RemoveElement)();
+const _33_SearchInRotated_1 = require("./code/Medium/33_SearchInRotated");
+(0, _33_SearchInRotated_1.SearchInRotated)();

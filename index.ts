@@ -30,5 +30,6 @@ import { ValidParent } from "./code/easy/20_ValidParent";
 import { RemoveDuplicates } from "./code/easy/26_RemoveDuplicates";
 import { RemoveElement } from "./code/easy/27_RemoveElement";
 import { SearchInRotated } from "./code/Medium/33_SearchInRotated";
+import { SortColor } from "./code/Medium/75_SortColor";
 
-SearchInRotated()
+SortColor()

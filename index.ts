@@ -27,5 +27,6 @@ import { UniqueBinary } from "./code/Medium/95_UniqueBinary";
 import { MergeTwoSorted } from "./code/easy/21_MergeTwoSorted";
 import { RemoveNthNode } from "./code/Medium/19_RemoveNthNode";
 import { ValidParent } from "./code/easy/20_ValidParent";
+import { RemoveDuplicates } from "./code/easy/26_RemoveDuplicates";
 
-ValidParent()
+RemoveDuplicates()

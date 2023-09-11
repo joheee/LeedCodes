@@ -1,4 +1,4 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const _66_PlusOne_1 = require("./code/easy/66_PlusOne");
-(0, _66_PlusOne_1.PlusOne)();
+const _74_Search2D_1 = require("./code/Medium/74_Search2D");
+(0, _74_Search2D_1.Search2D)();

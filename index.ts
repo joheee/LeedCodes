@@ -36,4 +36,4 @@ import { PlusOne } from "./code/easy/66_PlusOne";
 import { Search2D } from "./code/Medium/74_Search2D";
 import { Search2DCol } from "./code/Medium/240_Search2D";
 
-Search2DCol()
+Search2D()

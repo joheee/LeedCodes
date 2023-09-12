@@ -42,8 +42,19 @@ function binarySearchTwoDimension(matrix:number[][], target:number) : boolean {
     return false
 }
 
+function searchMatrixOptimize(matrix:number[][],target:number) : boolean {
+    let col = 0
+    let row = matrix.length - 1
+    while(col < matrix[0].length && row >= 0) {
+        if(matrix[row][col] === target) return true
+        else if(matrix[row][col] < target) col++
+        else row --
+    } 
+    return false
+}
+
 function searchMatrix(matrix: number[][], target: number): boolean {
-    return binarySearchTwoDimension(matrix,target)
+    return searchMatrixOptimize(matrix,target)
 };
 
 export function Search2D() {
